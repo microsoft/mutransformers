@@ -25,6 +25,11 @@ These files are copied from [Huggingface Transformers v4.16.2](https://github.co
 You can find the coord check results in [`tests/coordcheck/CoordCheck.ipynb`](tests/coordcheck/CoordCheck.ipynb).
 You can rerun the notebook yourself as well after installation.
 
+For example, the coord check for BERT in standard parametrization (SP) shows many activations blow up with width,
+![](tests/coordcheck/bert_sp_dhead_coord_check.png)
+but the same for BERT in muP shows activation scale consistent with width.
+![](tests/coordcheck/bert_mup_dhead_coord_check.png)
+
 ## Basic Usage of Models
 The models here can be used for your training purposes as well, though we have not made sure to replicate the original numbers of each of these transformer models.
 The models in this package can be used as follows, taking BERT as an example:
