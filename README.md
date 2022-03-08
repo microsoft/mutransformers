@@ -8,8 +8,8 @@ As a secondary purpose, one can also use the models here as provided.
 
 Go to this project directory and do
 ```
-pip install .
-pip install mup
+pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Injecting muP into Existing Transformers

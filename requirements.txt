@@ -1,0 +1,8 @@
+numpy>=1.18.5
+pandas>=1.1.2
+torch>=1.6.0
+torchvision>=0.7.0
+seaborn>=0.11.2
+transformers>=4.16.2
+pyyaml
+mup
