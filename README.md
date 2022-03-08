@@ -22,7 +22,7 @@ These files are copied from [Huggingface Transformers v4.16.2](https://github.co
 ## Coord Check
 
 [Coordinate checking](https://github.com/microsoft/mup#coord-check) is a way of verifying that muP is implemented correctly just like gradient checking is a way of verifying that autograd is implemented correctly.
-You can find the coord check results in `tests/coordcheck/CoordCheck.ipynb`.
+You can find the coord check results in [`tests/coordcheck/CoordCheck.ipynb`](tests/coordcheck/CoordCheck.ipynb).
 You can rerun the notebook yourself as well after installation.
 
 ## Basic Usage of Models
