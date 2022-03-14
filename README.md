@@ -35,7 +35,7 @@ The models here can be used for your training purposes as well, though we have n
 The models in this package can be used as follows, taking BERT as an example:
 ```python
 from mutransformers import BertConfig, BertForMaskedLM
-from mup import make_base_shapes, set_base_shapes
+from mup import make_base_shapes, set_base_shapes, MuAdamW
 from functools import partial
 # define a base model
 base_config = BertConfig(
@@ -70,7 +70,11 @@ set_base_shapes(target_model, base_shapes)
 # re-initialize
 target_model.apply(target_model._init_weights)
 
-# train target_model, etc
+# make sure to use mup optimizers for training
+optimizer = MuAdamW(target_model.parameters(), lr=1e-3)
+
+# train
+...
 ```
 
 For more general information on how to use `mup`, see [the muP package documentation](https://github.com/microsoft/mup#basic-usage).
