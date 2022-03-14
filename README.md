@@ -1,6 +1,6 @@
 # muTransformers
 
-This repo implements [muP](https://arxiv.org/abs/2203.03466) for selected PyTorch models in [Huggingface Transformers](https://github.com/huggingface/transformers).
+This repo implements [muP](https://github.com/microsoft/mup) ([paper](https://arxiv.org/abs/2203.03466)) for selected PyTorch models in [Huggingface Transformers](https://github.com/huggingface/transformers).
 The primary purpose of this repo is as a clean demonstration of how to inject muP into different variants of transformers.
 As a secondary purpose, one can also use the models here as provided.
 
@@ -14,10 +14,10 @@ pip install -e .
 
 ## Injecting muP into Existing Transformers
 
-Taking BERT as an example, there are two files `modeling_bert.py` and `configuration_bert.py` in `mutransformers/models/bert/` we copied from [Huggingface Transformers](https://github.com/huggingface/transformers) and made a small number of modifications to implement muP.
+Taking BERT as an example, there are two files [`modeling_bert.py`](mutransformers/models/bert/modeling_bert.py) and [`configuration_bert.py`](mutransformers/models/bert/configuration_bert.py) in `mutransformers/models/bert/` we copied from [Huggingface Transformers](https://github.com/huggingface/transformers) and made a small number of modifications to implement muP.
 Our modifications in these files can all be found by searching for `### muP`.
 
-These files are copied from [Huggingface Transformers v4.16.2](https://github.com/huggingface/transformers/tree/v4.16.2). We provide the original files as `_original_*.py` for easy comparison, for example, `_original_modeling_bert.py`.
+These files are copied from [Huggingface Transformers v4.16.2](https://github.com/huggingface/transformers/tree/v4.16.2). We provide the original files as `_original_*.py` for easy comparison, for example, [`_original_modeling_bert.py`](mutransformers/models/bert/_original_modeling_bert.py).
 
 ## Coord Check
 
